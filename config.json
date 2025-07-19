@@ -1,0 +1,56 @@
+{
+  "protocol_engine": {
+    "name": "Universal Protocol Engine", 
+    "version": "3.2"
+  },
+  "tunnel": {
+    "mode": "client",
+    "listen_port": "2020",
+    "server_address": "example.com:443",
+    "vpn_server_address": "127.0.0.1:4040",
+    "buffer_size": 65536,
+    "keepalive_interval": 30,
+    "protocol_rotation": "random",
+    "rotation_interval": 60
+  },
+  "network": {
+    "fpe_key": "aGVsbG93b3JsZDEyMzQ1Ng==",
+    "connection_timeout": 30,
+    "read_timeout": 60,
+    "write_timeout": 60
+  },
+  "performance": {
+    "buffer_size_bytes": 65536,
+    "worker_threads": 0,
+    "connection_pooling": true,
+    "tcp_nodelay": true,
+    "tcp_keepalive": true
+  },
+  "timeouts": {
+    "connection_timeout_seconds": 30,
+    "read_timeout_seconds": 60,
+    "write_timeout_seconds": 60,
+    "idle_timeout_seconds": 300
+  },
+  "behavior": {
+    "auto_reconnect": true,
+    "max_reconnect_attempts": 5,
+    "reconnect_delay_seconds": 10,
+    "statistics_enabled": true,
+    "verbose_logging_from_config": false,
+    "preserve_connection_order": true
+  },
+  "protocol_selection": {
+    "default_protocol": "fake_https",
+    "fallback_protocols": ["custom_udp_protocol", "dns_tunnel"],
+    "protocol_rotation_enabled": false,
+    "rotation_interval_minutes": 60
+  },
+  "security": {
+    "enable_fpe": true,
+    "fpe_template_rotation": true,
+    "connection_encryption": true,
+    "timing_obfuscation": true
+  },
+  "protocols": []
+}

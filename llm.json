@@ -1,0 +1,29 @@
+{
+  "protocol_engine": {
+    "name": "Universal Protocol Engine",
+    "version": "3.2"
+  },
+  "protocols": [
+    {
+      "identifier": "fake_https",
+      "transport": "tcp",
+      "frame_structure": {
+        "request_format": [
+          "POST /api/data HTTP/1.1\r\n",
+          {
+            "Host": "api.example.com",
+            "Content-Type": "application/octet-stream",
+            "Content-Length": "${DATA_SIZE}"
+          },
+          "\r\n",
+          "<<VPN_DATA>>"
+        ],
+        "line_ending": ""
+      },
+      "state_machine": {
+        "initial_state": "connected",
+        "states": [{"name": "connected", "transitions": []}]
+      }
+    }
+  ]
+}
