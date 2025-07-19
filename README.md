@@ -1,4 +1,4 @@
-# nyx-core 🌌
+# nyx-core 🌌 (Not ready yet)
 
 **nyx-core** is a powerful and flexible system crafted for tunneling data across networks with custom protocol definitions. It ensures secure and stealthy data transfer by wrapping payloads in user-defined protocol formats, making it ideal for bypassing advanced Deep Packet Inspection (DPI) systems, such as those used in sophisticated firewalls. With a highly configurable architecture, users can define custom protocols through a simple JSON file (`pattern.json`) without touching the core codebase.
 
